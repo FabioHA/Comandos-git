@@ -379,6 +379,50 @@ Note que a única diferença entre adicionar e excluir um branch remoto é os do
 ------------------------------------------------------------------------------
 
 
+PAG
+para puxar(pull) alterações no repositório remoto, alterações essas que podem ter sido feitas por outros colaboradores,
+vc utiliza o seguinte comando:
+
+	git pull origin   nome_do_branch_la_do_repositorio_remoto
+
+
+
+
+OBS: muitas vezes o branch escolhido será o master, então é comum esse comando ficar assim:
+
+	git pull origin  master
+
+
+OBS2: essa ação de puxar puxa tudo mesmo, desde arquivos criados/modificados até seus respectivos commits
+que podream ser acessados normalmente via git log
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
