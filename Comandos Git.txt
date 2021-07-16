@@ -1,0 +1,282 @@
+
+
+**********SUMARIO************************
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+
+
+
+PAG
+
+para de finir o nome do usuario e seu email em uma maquina, em que o git esta instalado,
+se usa esses comandos:
+
+git config --global user.name "Fabio H******* de *****"
+
+git config --global user.email "f*****.*****.sp@gmail.com"
+
+-------------------------------------------------------------------------
+
+PAG
+
+para defir o VisualStudio como o editor principal use esse comando:
+
+git config --global core.editor "code --wait"
+
+--------------------------------------------------------------
+PAG
+para saber as configuracoes definidas no git da maquina, como por exemplo o nome,email,editor-padrao
+use esse comando:
+
+git config --list
+
+------------------------------------------------------------------
+
+
+
+PAG
+OBS IMPORTANTE!! As vezes, por engano, vc pode clicar no terminal e ele fica preso, preso no sentido que vc não consegue sair mesmo apertando qualquer botão, 
+ai é só vc apertar a tecla q e está tudo resolvido, ou seja vc as coisas voltam ao normal
+
+
+
+
+
+
+
+----------------------------------------------------------------
+
+PAG
+*INICIANDO UM REPOSITORIO*
+
+para saber em que pasta se esta utilize esse coamndo: pwd
+
+-----------------------------------------------
+
+PAG
+para saber os arquivos e pastas presentes no diretorio/pasta atual 
+
+utilize o comando: ls
+
+ou utilize o comando: dir
+
+
+OBS: o ls é melhor pois ele diferencia as pastas de outros arquivos, pois ele mudar a cor do nome da pasta para azul. E isso
+ajuda a bater o olho e ver o que é uma pasta e o que é por exemplo um arquivo imagem jpg, png, ou pdf
+
+
+------------------------------------------------
+
+PAG
+para mudar de pastas se utiliza o comando cd e o nome da pasta ou o endereco ate ela
+por exemplo vamos supor que eu estou na pasta c. Ai eu digito um ls, pra saber quais arquivos/pastas ela possui,
+ai eu vejo uma pasta chamada  users e eu quero entrar nela então o comando a se digitar
+é:
+
+cd users
+-------
+
+agora vamos supor que eu quero ir para uma pasta que esta a muitos subniveis da minha, tipo 
+seja pra chegar nela eu precisaria entrar em varias subpastas. tipo cd pastaA, depois cd pastaB, 
+cd pastaC, cd pastaD, .. e  assim por diante. Seria muito trabalhoso/verboso e burocratico não?
+Mas felizmente existe uma solucão basta digitar o endereco(path) inteiro até ela. 
+
+cd C:\Users\Fabio\Desktop\pastaA\pastaB\pastaC\pastaD
+
+OBS IMPORTANTE!! esse codigo falhara pois o git não aceita o \ então vc tem que mudar cada \ por /
+assim o:
+
+C:/Users/Fabio/Desktop/pastaA/pastaB/pastaC/pastaD
+
+-------------------------------------------------
+
+PAG
+para criar uma nova pasta via git utilize esse comando:
+
+mkdir nome_da_pasta
+
+------------------------------------------
+
+para inicializar um projeto voce deve entrar na pasta onde esse projeto ficará, 
+e depois utilize o seguinte comando:
+
+git init 
+
+-------------------------------------------
+
+PAG
+para varrer/percorrer uma pasta e saber se algum arquivo foi adicionado ou modificado
+utilize o comando:
+
+git status
+
+-------------------------------------------------------
+
+PAG
+para adicionar UM(1) novo arquivo ou um arquivo que sofreu modificações 
+utilize o comando:
+
+git add nome_do_arquivo
+
+---------------------------------------
+
+PAG
+para adicionar VARIOS novos arquivos ou VARIOS arquivos que sofreram modificacoes
+utilize o comando:
+
+git add -A
+
+OBS IMPORTANTE!: o A tem que ser maiusculo, senao nao funciona
+
+--------------------------------------------------------
+
+
+PAG
+para criar uma mensagem dizendo que alteracoes foram feitas(commit)
+utilize o comando:
+
+git commit -m "Alguma mensagem que descreve as alteracoes"
+
+
+
+
+-----------------------------------------------------
+
+
+PAG
+para ver a lista de todos os commits feitos numa determinado ramo do projeto(branch)
+utilize o comando:
+
+git log 
+
+--------------------------------------------------------
+
+
+PAG
+se surgir algum erro no seu codigo e vc precisar voltar a um estado anterior a esse erro
+isso e possivel utilizando o git. Existem tres possibilidades. 
+
+
+Na 1 PRIMEIRA vc pode voltar ao estado anterior do commit, ou seja os arquivos permanecerão 
+da mesma forma como estão mas não estarão salvos, o que te permite corrigir algum erro 
+e depois commitar, não precisa adicionar(git add -A) pois no modo soft ele ja vem adicionado
+e basta so commit, e quando ele for commitado esse novo commit substituirá o ultimo, que nesse
+caso era o errado que está sendo corrigido.
+para utilizar esse comando faça:
+
+git reset --soft hash_do_commit
+
+
+Obs: existe o modo --mixed e sua unica diferenca, pelo que eu entendi, é que ele volta
+ao estado anterior ao adicionamento , então vc teria que adicionar(git add -A) e depois 
+salvar(commit). Então essa seria a 2 SEGUNDA opcao
+
+
+
+Na 3 TERCEIRA opcao, a mais radical, vc volta ao estado anterior do commit e os arquivos 
+criados serão excluidos. Então muito cuidado!!. Mas também os arquivos excluido voltarão.
+Ou seja todos os arquivos criados após o reset serão excluidos, e todos os arquivos
+excluidos após o reset voltarão. Utilize esse comando como ultimo recurso ou com muito cuidado!!
+
+para utilizalo faça:
+
+
+git reset --hard hash_do_commit
+
+
+-----------------------------------------------------------------
+
+
+PAG
+
+para criar um novo ramo do projeto(branch) basta utilizar o comando:
+
+git branch nome_do_branch
+
+
+OBS IMPORTANTE!:  quando um novo branch(ramo) é criado ele copia a versão 
+atual do prejeto inicializado no git, e apartir daí segue seu próprio 
+rumo. Por exemplo vamos supor que eu crio um brqanch chamdo ramo2(git branch ramo2)
+agora existiram dois branchs, o master(sempre existe) e o ramo2.
+
+o ramo2 é criado como uma cópia do master, mas se por exemplo eu criar um arquivo teste.txt,
+ou qualquer outro tipo de arquivo/modificação, ele só existirá no ramo2. Isso permite fazer
+modificações em um branch sem afetar o outro.
+
+
+---------------------------------------------------------------------
+
+PAG
+para mudar de branch utilize o comando:
+
+git checkout nome_do_branch
+
+
+---------------------------------------------
+
+PAG 
+para saber quais/quantos branchs existem, qual está selecionado(aparecerá com um asterisco), 
+utilize o comando:
+
+git branch
+
+--------------------------------------------------------
+
+PAG
+para saber quais foram as modificações feitas em um arquivo antes de comitalas 
+utilize o comando:
+
+git diff
+
+OBS: esse comando apresenta uma símbologia própria par dizer se uma linha foi acrescentada(+), excluída(-), 
+ou não sofreu alteração(sem símbolo).
+
+Exemplo 
+
++Essa linha foi acrescentada
++Essa também foi
+Essa aqui não foi alterada
+não foi alterada
+-Já essa foi excluída
++
++
++	(espaços em branco tbm podem ser acrescentados. nesse caso eles aparecerão como o exemplo acima, ou seja uma linha com o símbolo + vazia)
+não foi alerada
+não foi alerada
+-essa foi excluída
+
+
+O comando diff possuí variações, como por exemplo se vc quiser saber apenas o nome dos
+arquivos modificados, não seu conteúdo, vc digita o comando:
+
+git diff --name-only
+
+
+se vc quiser ver a modificação em um arquivo específico vc usa o comando:
+
+git diff nome_do_arquivo
+
+
+existe também a possibilidade voltar as modificações feitas, não comitadas, com o
+diff para isso utilize o comando:
+
+git checkout HEAD -- nome_do_arquivo
+
+OBS: Quando eu utilizei esse comando num primeiro momento ele não retornou ao estado anterior 
+da modificação, pelo menos visualmente, mas após fechar e abrir novamente o arquivo eu constatei 
+que ele voltou ao estdo anterior as modificações, ou seja funcionou
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
