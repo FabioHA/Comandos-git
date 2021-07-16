@@ -339,6 +339,12 @@ OBS IMPORTANTE2: o --no-edit é usado pois senão o git vai abrir o editor padr�
 vc já fazer a  verificação do código, e nesse exemplo vc só quer voltar ao estado 
 que funcionava e não reeditar o código.
 
+OBS IMPORTANTE3: outro ponto interessante é que o próprio git irá fazer um commit
+que terá como característica o nome revert seguindo do nome do commit revertido entre aspas.
+Veja o exemplo abaixo:   
+	
+      revert "nome_do_commit_revertido"
+
 
 
 
