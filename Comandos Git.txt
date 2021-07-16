@@ -316,6 +316,89 @@ seu funcionamento, no caso do sistema, precisam ser de alguma forma ocultados. E
 que devem ser ignorados. Isso faz com que esses arquivos se tornem ocultos, apesar de seus nomes aparecerem no
 gitignore seu conteúdo é vedado, ou seja não é possível acessa-lo 
 
+-------------------------------------------------------------------------------------
+
+
+PAG
+imagine que é sexta-feira e vc está quase na hora de encerrar o expediente mas inesperadamente 
+seu sistema apresenta um bug insoluvél e a aplicação cai. Desespero. Você precisa voltar imediatamente 
+ao estado anterior, quando tudo funcionava bem, ai vc pensa em usar o reset 
+mas se vc utilizar o reset vai perder todo o dia de trabalho duro, então o que fazer?
+Nesse caso utilize o comando revert. O comando revert permite voltar ao estado anterior 
+mas ele conserva hash do commit(git log) e assim permite vc voltar na segunda-feira(com calma)
+e verificar o que de fato acarretou o bug. O fim de semana foi preservado.
+
+git revert  --no-edit  hash_do_commit_que_deu_erro
+
+
+OBS IMPORTANTE: o hash é do commit que deu erro, ou seja é provavelmente o último commit.
+Esse ponto é outra diferença do reset pois no reset é o hash do commit anterior. Então
+LEMBRE-SE no revert é o hash do commit que deu erro!!.
+
+OBS IMPORTANTE2: o --no-edit é usado pois senão o git vai abrir o editor padrão para
+vc já fazer a  verificação do código, e nesse exemplo vc só quer voltar ao estado 
+que funcionava e não reeditar o código.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
