@@ -347,6 +347,74 @@ Veja o exemplo abaixo:
 
 
 
+--------------------------------------------------------------------------------
+
+PAG
+para adicionar um novo branch ao repositório remoto primeiro vc deve selecionar 
+esse branch(git checkout) e uma vez dentro desse branch vc utiliza o seguinte comando:
+
+	git push origin   nome_do_branch_que_sera_enviado
+
+
+
+
+---------------------------------------------------------------------------------
+
+
+PAG
+para excluir um branch local primeiro é necessário vc sair desse branch(git checkout), e após sair dele utilize o seguinte comando:
+
+	git branch -D nome_do_branch
+
+
+OBS: tem que ser o -D maiúsculo mesmo, senão não funciona.
+
+
+OBS2: para excluir um branch remoto utilize o seguinte comando:
+
+	git push origin :nome_do_branch
+
+Note que a única diferença entre adicionar e excluir um branch remoto é os dois pontos(:)
+
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
