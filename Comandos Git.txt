@@ -308,6 +308,14 @@ para saber qual é o nome do seu branch digite: git branch
 
 ----------------------------------------------------------------------------------
 
+PAG
+as vezes é necessário ocultar de usuários externos alguns arquivos do sistema, tipo as 
+senhas do bancos de dados, informações pessoais.. etc, que apesar de serem indispensaveís ao 
+seu funcionamento, no caso do sistema, precisam ser de alguma forma ocultados. E isso 
+é possível criando um arquivo chamado .gitignore e escrevendo nele o nome dos arquivos, que estão no repositório local, 
+que devem ser ignorados. Isso faz com que esses arquivos se tornem ocultos, apesar de seus nomes aparecerem no
+gitignore seu conteúdo é vedado, ou seja não é possível acessa-lo 
+
 
 
 
