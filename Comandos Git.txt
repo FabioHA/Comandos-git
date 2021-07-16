@@ -399,6 +399,30 @@ que podream ser acessados normalmente via git log
 -----------------------------------------------------------------------------------------------------------
 
 
+PAG
+para clonar um repositório, ou seja para baixar um projeto lá do github para sua máquina, basta
+utilizar o seguinte comando:
+
+	git clone  url_do_projeto_la_do_github
+
+
+OBS: quando eu digo url é url mesmo, tipo ir lá no github do projeto que vc quer clonar
+e copiar a url mesmo. Ficará algo meio assim:
+	
+	git clone https://github.com/nome_do_usuario/nome_do_projeto
+
+
+OBS2: NÃO é necessário vc inicializar a pasta(git init) que recebera o git clone, pois 
+todo projeto baixado vira como uma pasta e nessa pasta virá também uma pasta .git, ou seja
+é como se ela já fosse inicializada com o git init. Ela também virá com todos os commits
+feitos anteriormentes, que poderão ser vistos via git log. Mas lembre-se vc não poderá fazer git push
+pois vc apenas clonou o projeto em seu computador, para dar git push vc necessita da permissão do
+usuário e também esse não o propósito desse comando.
+ 
+
+
+
+
 
 
 
