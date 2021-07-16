@@ -16,7 +16,7 @@
 
 PAG
 
-para de finir o nome do usuario e seu email em uma maquina, em que o git esta instalado,
+para definir o nome do usuario e seu email em uma maquina, em que o git esta instalado,
 se usa esses comandos:
 
 git config --global user.name "Fabio H******* de *****"
@@ -275,6 +275,43 @@ da modificação, pelo menos visualmente, mas após fechar e abrir novamente o a
 que ele voltou ao estdo anterior as modificações, ou seja funcionou
 
 ----------------------------------------------------------------------------------------------------------------------
+
+
+PAG 
+
+Depois que seu computador já está sincronizado com sua conta no github, vou listar os seguintes passos para associar 
+repositório local com o remoto. Primeiro vc precisa ter uma pasta ja inicializada(git init) no seu computador e também criar 
+um repositório la na conta do github. Assim que vc criar seu reporitório remoto o próprio github vai te fornecer um código 
+para associar seu repositório local com o remoto.
+
+Vai ser algo parecido com o comando abaixo:
+
+git remote add origin https://github.com/seu_nome_usuario_no_github/nome_da_pasta_que_vc_criou.git
+
+aí vc vai copiar esse comando e colar ele lá no terminal do git(janelinha preta), detalhe importante tem que ser no
+mesmo diretório que vc vai querer associar com o repositório remoto
+
+
+
+depois se vc quiser enviar algum arquivo local para o servidor remoto vc utiliza o comando abaixo:
+
+ git push -u origin main
+
+OBS: quando eu utilizei esse comando ele falhou pois o meu branch principal não se chama main, ele se chama master
+então o comando que funcionou para mim foi: 
+ 
+  git push -u origin master 
+
+para saber qual é o nome do seu branch digite: git branch
+
+
+
+
+
+
+
+
+
 
 
 
