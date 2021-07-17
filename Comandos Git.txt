@@ -2,6 +2,21 @@
 
 **********SUMARIO************************
 
+PAG 1: Configurações Iniciais
+PAG 2: Definir editor VisualStudio
+PAG 3: Mostrar as Configurações Definidas no git
+PAG 4: Tecla Q desbloqueia a tela do git
+PAG 5: Descobrindo o nome da pasta atual
+PAG 6:
+PAG 7:
+PAG 8:
+PAG 9:
+PAG 10:
+PAG 11:
+PAG 12:
+PAG 13:
+PAG 14:
+PAG 15:
 
 
 
@@ -14,7 +29,7 @@
 
 
 
-PAG
+PAG 1
 
 para definir o nome do usuario e seu email em uma maquina, em que o git esta instalado,
 se usa esses comandos:
@@ -25,14 +40,14 @@ git config --global user.email "f*****.*****.sp@gmail.com"
 
 -------------------------------------------------------------------------
 
-PAG
+PAG 2
 
 para defir o VisualStudio como o editor principal use esse comando:
 
 git config --global core.editor "code --wait"
 
 --------------------------------------------------------------
-PAG
+PAG 3
 para saber as configuracoes definidas no git da maquina, como por exemplo o nome,email,editor-padrao
 use esse comando:
 
@@ -42,9 +57,9 @@ git config --list
 
 
 
-PAG
+PAG 4
 OBS IMPORTANTE!! As vezes, por engano, vc pode clicar no terminal e ele fica preso, preso no sentido que vc não consegue sair mesmo apertando qualquer botão, 
-ai é só vc apertar a tecla q e está tudo resolvido, ou seja vc as coisas voltam ao normal
+pra resolver esse problema é só vc apertar a tecla 'Q' e está tudo resolvido, ou seja as coisas voltam ao normal.
 
 
 
@@ -54,7 +69,7 @@ ai é só vc apertar a tecla q e está tudo resolvido, ou seja vc as coisas volt
 
 ----------------------------------------------------------------
 
-PAG
+PAG 5
 *INICIANDO UM REPOSITORIO*
 
 para saber em que pasta se esta utilize esse coamndo: pwd
@@ -419,6 +434,86 @@ feitos anteriormentes, que poderão ser vistos via git log. Mas lembre-se vc nã
 pois vc apenas clonou o projeto em seu computador, para dar git push vc necessita da permissão do
 usuário e também esse não o propósito desse comando.
  
+
+--------------------------------------------------------------------------------------
+
+PAG 
+é possível contribuir com um projeto de outra pessoa, se ele estiver lá no github, por meio 
+de um fork. Funciona assim, toda a conta no github que possuí projetos publicos tem um botão
+chamdo fork e esse botão permite que vc copie o projeto em em questão no seu próprio repositório remoto, ou seja sua conta no github.
+Uma vez lá na sua conta remota, no seu github, vc consegue clona-lo no seu repositório local(git clone), ou seja no seu computador.
+
+Lá no seu computador vc consegue alterar o/os arquivos, fazer commits, e enviar git push. Mas lembre-se essas alterações acontecerão apenas no 
+seu repositório remoto, não no original que foi "forkado". 
+
+Para que essa modificação seja concretizada no original vc precisará da aprovação do dono do projeto original. 
+Então vamos supor que vc fez o fork do arquivo, depois vc clonou esse arquivo no seu computador, e fez os git push,
+enfim terminou seu trabalho, agora como solicitar a aprovação do dono do arquivo?
+No projeto "forkado", lá no seu github, vc vai clicar no botão 'New pull request', será aberto uma página
+com as informações sobre as alterações do projeto, uma vez confirido tudo vc clicará no botão chamado 'Create pull request',
+após isso abrirá uma página/seção onde vc específica o porque de sua alteração, tipo qual problema vc consegui resolver, enfim tenta
+demonstrar porque o dono deveria aceitar suas modificações, aí vc vai clicar novamente no 
+botão 'Create pull request' e a solicitação de aprovação será enviado ao dono original que poderá ser aceita ou não.
+
+
+OBS IMPORTANTE!!: antes de vc fazer um git push no projeto do seu repositório remoto, o que foi "forkado", faça os seguintes comando por segurança:
+	
+	git branch 
+
+no caso esse git branch vai te dizer qual o nome os donos originais deram pro branch 
+
+Depois vc faz o seguinte comando:
+
+	git remote -v 
+
+Esse comando vai ter dizer o nome que os donos originais deram ao servidor remoto, provavelmente 
+será origin mas é bom usar esse comando para ter certeza.
+
+
+De posse dessas informações vc pode fazer o git push, que ficará dessa forma:
+
+	git push     nome_do_servidor_remoto(provavlemente origin)     nome_do_branch
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
