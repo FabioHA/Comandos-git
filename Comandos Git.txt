@@ -6,7 +6,7 @@ PAG 1: Configurações Iniciais
 PAG 2: Definir editor VisualStudio
 PAG 3: Mostrar as Configurações Definidas no git
 PAG 4: Tecla Q desbloqueia a tela do git
-PAG 5: Descobrindo o nome da pasta atual
+PAG 5: Descobrindo o nome da pasta atuals
 PAG 6:
 PAG 7:
 PAG 8:
