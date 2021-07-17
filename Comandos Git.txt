@@ -2,21 +2,33 @@
 
 **********SUMARIO************************
 
-PAG 1: Configurações Iniciais
-PAG 2: Definir editor VisualStudio
-PAG 3: Mostrar as Configurações Definidas no git
-PAG 4: Tecla Q desbloqueia a tela do git
-PAG 5: Descobrindo o nome da pasta atuals
-PAG 6:
-PAG 7:
-PAG 8:
-PAG 9:
-PAG 10:
-PAG 11:
-PAG 12:
-PAG 13:
-PAG 14:
-PAG 15:
+PAG 1:	git config --global
+PAG 2:	git config --global core.editor
+PAG 3:	git config --list
+PAG 4:	Tecla Q desbloqueia a tela do git
+PAG 5:	pwd
+PAG 6:	ls ou dir
+PAG 7:	comando cd
+PAG 8:	mkdir
+PAG 9:	git init
+PAG 10:	git status
+PAG 11:	git add
+PAG 12:	git add -A
+PAG 13:	git commit -m
+PAG 14:	git log
+PAG 15:	git reset
+PAG 16:	git branch nome_do_branch  //esse comando é para mudar/trocar de branch
+PAG 17:	git checkout
+PAG 18:	git branch
+PAG 19:	git diff
+PAG 20:	git remote add
+PAG 21:	.gitignore
+PAG 22:	git revert  --no-edit
+PAG 23:	git push origin   nome_do_branch_que_sera_enviado  //esse comando é para adicionar um novo branch ao repositório remoto
+PAG 24:	git branch -D nome_do_branch    e sua variação    git push origin :nome_do_branch
+PAG 25:	git pull origin  master
+PAG 26:	git clone
+PAG 27:	Como fazer um Fork
 
 
 
@@ -70,13 +82,13 @@ pra resolver esse problema é só vc apertar a tecla 'Q' e está tudo resolvido,
 ----------------------------------------------------------------
 
 PAG 5
-*INICIANDO UM REPOSITORIO*
 
-para saber em que pasta se esta utilize esse coamndo: pwd
+para saber em que pasta se está utilize o comando pwd, pois ele lhe dará todo path(caminho) desde de o diretório raiz. 
+o comando é esse: pwd
 
 -----------------------------------------------
 
-PAG
+PAG 6
 para saber os arquivos e pastas presentes no diretorio/pasta atual 
 
 utilize o comando: ls
@@ -90,7 +102,7 @@ ajuda a bater o olho e ver o que é uma pasta e o que é por exemplo um arquivo 
 
 ------------------------------------------------
 
-PAG
+PAG 7
 para mudar de pastas se utiliza o comando cd e o nome da pasta ou o endereco ate ela
 por exemplo vamos supor que eu estou na pasta c. Ai eu digito um ls, pra saber quais arquivos/pastas ela possui,
 ai eu vejo uma pasta chamada  users e eu quero entrar nela então o comando a se digitar
@@ -113,13 +125,14 @@ C:/Users/Fabio/Desktop/pastaA/pastaB/pastaC/pastaD
 
 -------------------------------------------------
 
-PAG
+PAG 8
 para criar uma nova pasta via git utilize esse comando:
 
 mkdir nome_da_pasta
 
 ------------------------------------------
 
+PAG 9
 para inicializar um projeto voce deve entrar na pasta onde esse projeto ficará, 
 e depois utilize o seguinte comando:
 
@@ -127,7 +140,7 @@ git init
 
 -------------------------------------------
 
-PAG
+PAG 10
 para varrer/percorrer uma pasta e saber se algum arquivo foi adicionado ou modificado
 utilize o comando:
 
@@ -135,7 +148,7 @@ git status
 
 -------------------------------------------------------
 
-PAG
+PAG 11
 para adicionar UM(1) novo arquivo ou um arquivo que sofreu modificações 
 utilize o comando:
 
@@ -143,7 +156,7 @@ git add nome_do_arquivo
 
 ---------------------------------------
 
-PAG
+PAG 12
 para adicionar VARIOS novos arquivos ou VARIOS arquivos que sofreram modificacoes
 utilize o comando:
 
@@ -154,7 +167,7 @@ OBS IMPORTANTE!: o A tem que ser maiusculo, senao nao funciona
 --------------------------------------------------------
 
 
-PAG
+PAG 13
 para criar uma mensagem dizendo que alteracoes foram feitas(commit)
 utilize o comando:
 
@@ -166,7 +179,7 @@ git commit -m "Alguma mensagem que descreve as alteracoes"
 -----------------------------------------------------
 
 
-PAG
+PAG 14
 para ver a lista de todos os commits feitos numa determinado ramo do projeto(branch)
 utilize o comando:
 
@@ -175,7 +188,7 @@ git log
 --------------------------------------------------------
 
 
-PAG
+PAG 15
 se surgir algum erro no seu codigo e vc precisar voltar a um estado anterior a esse erro
 isso e possivel utilizando o git. Existem tres possibilidades. 
 
@@ -210,7 +223,7 @@ git reset --hard hash_do_commit
 -----------------------------------------------------------------
 
 
-PAG
+PAG 16
 
 para criar um novo ramo do projeto(branch) basta utilizar o comando:
 
@@ -229,7 +242,7 @@ modificações em um branch sem afetar o outro.
 
 ---------------------------------------------------------------------
 
-PAG
+PAG 17
 para mudar de branch utilize o comando:
 
 git checkout nome_do_branch
@@ -245,7 +258,7 @@ git branch
 
 --------------------------------------------------------
 
-PAG
+PAG 19
 para saber quais foram as modificações feitas em um arquivo antes de comitalas 
 utilize o comando:
 
@@ -292,7 +305,7 @@ que ele voltou ao estdo anterior as modificações, ou seja funcionou
 ----------------------------------------------------------------------------------------------------------------------
 
 
-PAG 
+PAG 20
 
 Depois que seu computador já está sincronizado com sua conta no github, vou listar os seguintes passos para associar 
 repositório local com o remoto. Primeiro vc precisa ter uma pasta ja inicializada(git init) no seu computador e também criar 
@@ -323,7 +336,7 @@ para saber qual é o nome do seu branch digite: git branch
 
 ----------------------------------------------------------------------------------
 
-PAG
+PAG 21
 as vezes é necessário ocultar de usuários externos alguns arquivos do sistema, tipo as 
 senhas do bancos de dados, informações pessoais.. etc, que apesar de serem indispensaveís ao 
 seu funcionamento, no caso do sistema, precisam ser de alguma forma ocultados. E isso 
@@ -334,7 +347,7 @@ gitignore seu conteúdo é vedado, ou seja não é possível acessa-lo
 -------------------------------------------------------------------------------------
 
 
-PAG
+PAG 22
 imagine que é sexta-feira e vc está quase na hora de encerrar o expediente mas inesperadamente 
 seu sistema apresenta um bug insoluvél e a aplicação cai. Desespero. Você precisa voltar imediatamente 
 ao estado anterior, quando tudo funcionava bem, ai vc pensa em usar o reset 
@@ -364,7 +377,7 @@ Veja o exemplo abaixo:
 
 --------------------------------------------------------------------------------
 
-PAG
+PAG 23
 para adicionar um novo branch ao repositório remoto primeiro vc deve selecionar 
 esse branch(git checkout) e uma vez dentro desse branch vc utiliza o seguinte comando:
 
@@ -376,7 +389,7 @@ esse branch(git checkout) e uma vez dentro desse branch vc utiliza o seguinte co
 ---------------------------------------------------------------------------------
 
 
-PAG
+PAG 24
 para excluir um branch local primeiro é necessário vc sair desse branch(git checkout), e após sair dele utilize o seguinte comando:
 
 	git branch -D nome_do_branch
@@ -394,7 +407,7 @@ Note que a única diferença entre adicionar e excluir um branch remoto é os do
 ------------------------------------------------------------------------------
 
 
-PAG
+PAG 25
 para puxar(pull) alterações no repositório remoto, alterações essas que podem ter sido feitas por outros colaboradores,
 vc utiliza o seguinte comando:
 
@@ -414,7 +427,7 @@ que podream ser acessados normalmente via git log
 -----------------------------------------------------------------------------------------------------------
 
 
-PAG
+PAG 26
 para clonar um repositório, ou seja para baixar um projeto lá do github para sua máquina, basta
 utilizar o seguinte comando:
 
@@ -437,7 +450,7 @@ usuário e também esse não o propósito desse comando.
 
 --------------------------------------------------------------------------------------
 
-PAG 
+PAG 27
 é possível contribuir com um projeto de outra pessoa, se ele estiver lá no github, por meio 
 de um fork. Funciona assim, toda a conta no github que possuí projetos publicos tem um botão
 chamdo fork e esse botão permite que vc copie o projeto em em questão no seu próprio repositório remoto, ou seja sua conta no github.
@@ -473,6 +486,11 @@ será origin mas é bom usar esse comando para ter certeza.
 De posse dessas informações vc pode fazer o git push, que ficará dessa forma:
 
 	git push     nome_do_servidor_remoto(provavlemente origin)     nome_do_branch
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
 
 
